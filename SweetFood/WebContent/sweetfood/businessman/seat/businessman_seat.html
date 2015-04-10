@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <title>SweetFood</title>
+
+
+    <!-- The styles -->
+    <link  href="/SweetFood/sweetfood/common/css/bootstrap-united.min.css" rel="stylesheet">
+
+    <link href="/SweetFood/sweetfood/common/css/charisma-app.css" rel="stylesheet">
+    <link href='/SweetFood/sweetfood/common/bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='/SweetFood/sweetfood/common/bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/css/jquery.noty.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/css/noty_theme_default.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/css/elfinder.min.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/css/elfinder.theme.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/css/uploadify.css' rel='stylesheet'>
+    <link href='/SweetFood/sweetfood/common/css/animate.min.css' rel='stylesheet'>
+
+    <!-- jQuery -->
+    <script src="/SweetFood/sweetfood/common/bower_components/jquery/jquery.min.js"></script>
+
+<!-- external javascript -->
+
+
+<script src="/SweetFood/sweetfood/common/js/init-chart.js"></script>
+<script src="/SweetFood/sweetfood/common/bower_components/flot/jquery.flot.js"></script>
+<script src="/SweetFood/sweetfood/common/bower_components/flot/jquery.flot.pie.js"></script>
+<script src="/SweetFood/sweetfood/common/bower_components/bootstrap/js/tooltip.js"></script>
+
+<script src="/SweetFood/sweetfood/common/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/SweetFood/sweetfood/common/js/jquery.cookie.js"></script>
+<script src='/SweetFood/sweetfood/common/bower_components/moment/min/moment.min.js'></script>
+<script src='/SweetFood/sweetfood/common/bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+<script src='/SweetFood/sweetfood/common/js/jquery.dataTables.min.js'></script>
+<script src="/SweetFood/sweetfood/common/bower_components/chosen/chosen.jquery.min.js"></script>
+<script src="/SweetFood/sweetfood/common/bower_components/colorbox/jquery.colorbox-min.js"></script>
+<script src="/SweetFood/sweetfood/common/js/jquery.noty.js"></script>
+<script src="/SweetFood/sweetfood/common/bower_components/responsive-tables/responsive-tables.js"></script>
+<script src="/SweetFood/sweetfood/common/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<script src="/SweetFood/sweetfood/common/js/jquery.raty.min.js"></script>
+<script src="/SweetFood/sweetfood/common/js/jquery.iphone.toggle.js"></script>
+<script src="/SweetFood/sweetfood/common/js/jquery.autogrow-textarea.js"></script>
+<script src="/SweetFood/sweetfood/common/js/jquery.uploadify-3.1.min.js"></script>
+<script src="/SweetFood/sweetfood/common/js/jquery.history.js"></script>
+<script src="/SweetFood/sweetfood/common/js/charisma.js"></script>
+<script src="/SweetFood/sweetfood/common/js/knockout-3.1.0.js"></script>
+<script src="/SweetFood/sweetfood/common/js/jquery_extend.js"></script>
+<script src="/SweetFood/sweetfood/businessman/info/js/AT_businessman_info.js"></script>
+<script src="/SweetFood/sweetfood/common/js/bootbox.min.js"></script>
+<script src="/SweetFood/sweetfood/registAndLogin/js/AT_regist_login.js"></script>
+<script src="/SweetFood/sweetfood/registAndLogin/js/BS_regist_login.js"></script>
+<script src="/SweetFood/sweetfood/registAndLogin/js/ET_regist_login.js"></script>
+
+<script src="./js/AT_businessman_seat.js"></script>
+<script src="./js/BS_businessman_seat.js"></script>
+<script src="./js/ET_businessman_seat.js"></script>
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="/SweetFood/sweetfood/common/img/favicon.ico">
+    <style type="text/css">
+    .thumbnail img, .thumbnail > a 
+    {
+
+    height: 150px;
+    width: 150px;
+    position: relative;
+    display: block;
+}
+.circle {
+            
+            width: 60px;   /* div的宽和高为600px即正方形的边长为600px */
+            height: 60px;
+            text-align: center;
+                    
+            -moz-border-radius: 30px;   /* 圆的半径为边长的一半，即300px */
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+     
+            display: -moz-box;
+            display: -webkit-box;
+            display: box;
+     
+            -moz-box-orient: horizontal; 
+            -webkit-box-orient: horizontal;
+            box-orient: horizontal;
+     
+            -moz-box-pack: center;
+            -moz-box-align: center;
+     
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+     
+            box-pack: center;
+            box-align: center; 
+            
+            font:normal 15px/100% Arial;
+            text-shadow:1px 1px 1px #000;
+            color:#fff;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body onload="ET_businessman_seat.init()">
+    <!-- topbar starts -->
+      <div class="navbar navbar-default" role="navigation">
+<input type="text" style="display:none"  name="userid" id="userid" >
+        <div class="navbar-inner">
+      
+            <a class="navbar-brand" href="main.html"> <img alt="Charisma Logo" src="/SweetFood/sweetfood/common/img/logo20.png" class="hidden-xs"/>
+                <span>SweetFood</span></a>
+
+            <!-- user dropdown starts -->
+             <div class="btn-group pull-right" style="right: 20px;margin-top: -1px;margin-bottom: 2px">
+
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="padding-bottom: 5px;padding-top: 5px;">
+                  <img src="#" alt="User Avatar" class="img-circle" style="height: 45px; width: 45px; border: 1 inset #CCCCFF" id="userphoto"> <span class="hidden-sm hidden-xs"> Quya</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+          
+                    <li><a href="businessman_info.html" class=" glyphicon glyphicon-user"> 个人中心</a></li>
+                    <li class="divider"></li>
+                    <li><a id="logout"   class="glyphicon glyphicon-share-alt"> 退出登录</a></li>
+                </ul>
+            </div>
+            <!-- user dropdown ends -->
+
+            <!-- theme selector starts -->
+        
+            <!-- theme selector ends -->
+
+        
+        </div>
+    </div>
+    <!-- topbar ends -->
+<div class="ch-container">
+    <div class="row">
+        
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            
+           
+        <ul class="nav nav-pills nav-stacked main-menu">
+                      <li><a class="ajax-link" href="/SweetFood/sweetfood/businessman/food/businessman_food.html"><i class="glyphicon glyphicon-eye-open"></i><span> 我的美食</span></a>
+                       </li>
+                        <li ><a class="ajax-link" href="businessman_order.html"><i class="glyphicon glyphicon-list-alt"></i><span> 我的订单</span></a>
+                        </li>
+                       
+                        <li class="active"  ><a class="ajax-link" href="#"><i class="glyphicon glyphicon-edit"></i><span> 我的餐位</span></a></li>
+                  
+                    
+                        <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-font"></i><span> 我的DIY</span></a>
+                            <ul class="nav nav-pills nav-stacked" style="display:  none;">
+                                <li><a href="/SweetFood/sweetfood/businessman/diy/businessman_diy.html">我的推广</a></li>
+                                <li><a href="/SweetFood/sweetfood/businessman/diy/businessman_push.html">添加推广</a></li>
+                            </ul>
+                        </li>
+                     
+                       <li><a class="ajax-link" href="businessman_message.html"><i class="glyphicon glyphicon-envelope white"></i><span> 我的信息</span></a>
+                        </li>
+                        
+                        
+                        
+                     
+                    </ul>
+    
+        </div>
+
+        <!--/span-->
+        <!-- left menu ends -->
+
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+                     <div>
+        <ul class="breadcrumb">
+            <li>
+                <a href="main.html">主页</a>
+                 <li>
+                <a href="#">我的餐位</a>
+            </li>
+            </li>
+ 
+        </ul>
+    </div>
+
+
+ <div class="row">
+        <div class="box col-md-12" style="margin-top: 0px;">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="" style="background:#dd4814">
+                    <h2 ><i class="glyphicon glyphicon-star"></i> 我的餐位</h2>
+                    <div class="box-icon">
+                        <a  class="plus btn btn-round btn-default" style="background:#dd4814"><i class="glyphicon glyphicon-plus" ></i></a>
+                        <a  class="btn btn-minimize btn-round btn-default" style="background:#dd4814"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                    </div>
+                </div>
+	<div class="box-content" data-bind="foreach:seatlines ">
+                    <br>
+         <ul data-bind="foreach:$data.seats"class="thumbnails gallery"  style="height: 150px;margin-left: 40px;margin-bottom: 20px;" >
+            <li  class="thumbnail image" data-toggle="tooltip"  data-placement="right" data-bind="attr:{'data-toggle':'tooltip','data-original-title':$data.state}" >
+              <a   class="cboxElement box-content circle seatid "  data-bind="style:{'background-color':$data.state=='busy'? '#dd4814':'#2DD6EC'}" style="no-repeat;background-size:150px 100px;"  ><span style="position: absolute;top: 41%;left: 38%;"data-bind="text:$data.seatName+'('+$data.seatNum+'座)'"></span>
+<p class="btn-group" style="left: 3%; position: absolute; top: 106px;   width: 145px;">
+                    <button class="btn btn-warning btn-xs" data-bind="click:$root.onSeat">就座</button>
+                     <button class="btn btn-success btn-xs" data-bind="click:$root.offSeat">让座</button>
+                     <button class="btn btn-info btn-xs" data-bind="click:$root.openUpdateSeat">编辑</button>
+                    <button class="btn btn-danger btn-xs" data-bind="click:$root.deleteSeat">删除</button>
+                </p></a>
+                            </li>           
+         
+
+                                            </ul>
+ 
+                                         
+                            </div>
+
+            </div>
+              </div>
+              </div>
+        </div>
+        <!--/span-->
+
+  
+
+  
+
+    <!-- Ad ends -->
+
+    <hr>
+<!--添加座位-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background:#dd4814">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3 align="center"><span id="topic">添加餐桌</span></h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" >
+                        <div class="form-group">
+                        <input type="text" style="display:none"  name="seat" id="seatid" >
+                            <label for="seatname" class="control-label col-md-4">餐桌名：</label>
+                            <div class="col-md-5">
+                                <input type="text" id="seatname" class="form-control"/>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for=seatnum class="control-label col-md-4" >餐桌座位：</label>
+                            <div class="col-md-5">
+                                <input type="text" id="seatnum" class="form-control" />
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <label for="status" class="col-md-4 control-label">座位状态：</label>
+                            <div class="col-md-5">
+                                <label for="status" class="radio-inline"><input type="radio" id="status0" name="status"  value="free" checked="checked"/>空闲</label>
+                                <label for="status" class="radio-inline"><input type="radio" id="status1" name="status"  value="busy" />
+                                忙碌</label>
+                                </div>
+                        </div>
+                      
+                 
+                 <div class="form-group">
+                            <div class="col-md-offset-2" style="margin: auto;text-align: center">
+                                <!--required="required" onclick="javascript:window.location.href='index.html'" data-dismiss="modal" -->
+                                <input value="保存添加" type="button" class="btn btn-primary" id="operateseat" />
+                                <button type="button" class="btn btn-danger" id="closeseat">关闭</button>
+                            </div>
+                        </div>
+                        </form>
+                </div>
+              
+                          </div>
+      
+   </div>
+</div>
+</div><!--/.fluid-container-->
+</div>
+
+<script type="text/javascript">
+
+	  
+
+
+//  var tour;
+//  var temple;
+// document.body.onmousemove=function(e){
+	
+// $("#"+e.target.id).mouseover(function(){
+// 	tour=new Tour();
+//  	tour.addStep({ 
+//             element: "#"+e.target.id,
+//             placement: "right",
+//             title: "美味蛋挞",
+//              template: "",
+//             content: "营养早餐营养早餐营养早餐</br>营养早餐营养早餐营养早餐</br>营养早餐营养早餐营养早餐</br>营养早餐营养早餐营养早餐</br>营养早餐营养早餐营养早餐</br>营养早餐营养早餐营养早餐</br>营养早餐营养早餐营养早餐</br>营养早餐营养早餐营养早餐</br>营养早餐营养早餐营养早餐"
+//         });
+// 	tour.restart();
+	
+// });
+//  $("#"+e.target.id).mouseleave(function(){
+//  		tour.end();
+//  	});	
+	
+// };
+
+
+$('.car').mouseover(function(){
+	
+	 $('.shopcar').attr('href','#');
+	
+
+});
+$('.car').mouseleave(function(){
+$('.shopcar').removeAttr("href");
+});
+</script>
+
+</body>
+</html>

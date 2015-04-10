@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="userService"
+		class="com.quya.service.user.UserServiceImpl"
+		autowire="byName">
+	</bean>
+	
+	<bean id="businessmanService"
+		class="com.quya.service.businessman.BusinessmanServiceImpl"
+		autowire="byName">
+	</bean>
+	<bean id="foodService"
+		class="com.quya.service.food.FoodServiceImpl"
+		autowire="byName">
+	</bean>
+	<bean id="seatService"
+		class="com.quya.service.seat.SeatServiceImpl"
+		autowire="byName">
+	</bean>
+	<bean id="diyService"
+		class="com.quya.service.diy.DiyServiceImpl"
+		autowire="byName">
+	</bean>
+	<bean id="customerService"
+		class="com.quya.service.customer.CustomerServiceImpl"
+		autowire="byName">
+	</bean>
+</beans>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>SweetFood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+     <link  href="/SweetFood/sweetfood/common/css/bootstrap-united.min.css" rel="stylesheet" >
+
+    <link href="/SweetFood/sweetfood/common/css/charisma-app.css" rel="stylesheet" type="text/css">
+    <link href="/SweetFood/sweetfood/common/css/animate.min.css" rel='stylesheet'>
+    
+    <script src="/SweetFood/sweetfood/common/bower_components/jquery/jquery.min.js"></script>
+<script src="/SweetFood/sweetfood/common/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/SweetFood/sweetfood/common/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/SweetFood/sweetfood/common/js/jquery-ui.min.js"></script>
+ 
+    <script src="/SweetFood/sweetfood/common/js/jquery.history.js"></script>
+    <script src="/SweetFood/sweetfood/common/bower_components/chosen/chosen.jquery.min.js"></script>
+    <script src="/SweetFood/sweetfood/common/js/jquery.autogrow-textarea.js"></script>
+    <script src='/SweetFood/sweetfood/common/js/jquery.dataTables.min.js'></script>
+    <script src="/SweetFood/sweetfood/common/js/jquery.raty.min.js"></script>
+    <script src='/SweetFood/sweetfood/common/bower_components/moment/min/moment.min.js'></script>
+    <script src='/SweetFood/sweetfood/common/bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+    <script src="/SweetFood/sweetfood/common/bower_components/colorbox/jquery.colorbox-min.js"></script>
+    <script src="/SweetFood/sweetfood/common/js/jquery.uploadify-3.1.min.js"></script>
+    <script src="/SweetFood/sweetfood/common/js/jquery.iphone.toggle.js"></script>
+    <script src="/SweetFood/sweetfood/common/js/bootbox.min.js"></script>
+    <script src="/SweetFood/sweetfood/common/js/jquery.cookie.js"></script>
+	<script src="/SweetFood/sweetfood/common/js/charisma.js"></script>
+    
+    <script src="/SweetFood/sweetfood/common/js/jquery_extend.js"></script>
+    <script src="/SweetFood/sweetfood/registAndLogin/js/AT_regist_login.js"></script>
+    <script src="/SweetFood/sweetfood/registAndLogin/js/BS_regist_login.js"></script>
+    <script src="/SweetFood/sweetfood/registAndLogin/js/ET_regist_login.js"></script>
+ 
+
+	
+
+    
+    <link rel="shortcut icon" href="/SweetFood/sweetfood/common/img/favicon.ico">
+
+</head>
+
+<body  onload="ET_regist_login.init()" background="/SweetFood/sweetfood/common/img/background.jpg">
+<div class="navbar navbar-default" role="navigation">
+
+        <div class="navbar-inner">
+   
+            <a class="navbar-brand" href="main.html"> <img alt="Charisma Logo" src="/SweetFood/sweetfood/common/img/logo20.png" class="hidden-xs">
+                <span>SweetFood</span></a>
+
+            <!-- user dropdown starts -->
+            <div class="btn-group pull-right" style="right: 20px;">
+			<button type="button" class="btn btn-danger" id="loginDlg">登录</button>
+                	<button type="button" class="btn btn-danger" id="customerRegist">用户注册</button>
+                		<button type="button" class="btn btn-danger" id="businessRegist">商家注册</button>
+               
+            </div>
+             <div class="btn-group pull-center" style="left:330px;bottom:20px">
+            <h2 style="color:#EEF98F;">Welcome to Sweet O2O</h2>
+                </div>
+
+        </div>
+    </div>
+<!-- 顾客注册-->
+<div id="customerregist" class="modal fade">
+		<div class="modal-dialog" style="width: 450px; height: 200px;">
+			<div class="modal-content">
+				<div class="modal-header" style="background:#dd4814">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" align="center">用户注册</h4>
+				</div>
+				<div class="modal-body" style="background: #FAD8CC;">
+					<form class="form-horizontal" id="registerform">
+						<div class="form-group">
+							<label for="username" class="control-label col-md-4">昵称：</label>
+							<div class="col-md-5">
+												<input type="text" style="display:none" value="2" name="power" id="power2">
+								<input type="text" id="username" name="username"
+									class="form-control" placeholder="输入昵称" required pattern="^\d{6}$"
+                        title="输入六位工号，如：123456"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="pwd" class="control-label col-md-4">密码：</label>
+							<div class="col-md-5">
+								<input type="password" id="pwd" name="pwd"
+									class="form-control" placeholder="6至12位字符或数字" required pattern="^[a-zA-Z0-9]{6,12}$"title="密码必须是6至12位字符或数字" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="confirm" class="control-label col-md-4">确认密码：</label>
+							<div class="col-md-5">
+								<input type="password" id="confirm" name="confirm"
+									class="form-control" placeholder="6至12位字符或数字"  required pattern="^[a-zA-Z0-9]{6,12}$"title="密码必须是6至12位字符或数字" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="gender" class="control-label col-md-4">性别：</label>
+							<div class="col-md-5">
+								<input  name="gender2" type="radio" value="male"
+								 checked="checked"/> 男 <input  name="gender2"
+									type="radio" value="female" /> 女
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email2" class="control-label col-md-4">email：</label>
+							<div class="col-md-5">
+								<input type="text" id="email2" placeholder="email"
+									class="form-control" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$"
+                        title="邮箱正确格式：xxx@xxx.xxx"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="phone" class="control-label col-md-4">手机：</label>
+							<div class="col-md-5">
+								<input type="text" id="phone2" placeholder="11位手机号"
+									class="form-control" required pattern="^\d{11}$"
+                        title="手机正确格式：1380038000" />
+							</div>
+						</div>
+
+					
+						<div class="form-group">
+							<div class="col-md-offset-2" style="margin: auto;text-align: center">
+								<!--required="required" onclick="javascript:window.location.href='index.html'" data-dismiss="modal" -->
+								<input value="注册" type="button" class="btn btn-primary" id="Cregist"/>
+								<button type="button" class="btn btn-danger"
+									>取消</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- 顾客注册-->
+	<!-- 商家注册-->
+<div id="businessregist" class="modal fade">
+		<div class="modal-dialog" style="width: 450px; height: 200px;">
+			<div class="modal-content">
+				<div class="modal-header" style="background:#dd4814">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" align="center">商家注册</h4>
+				</div>
+				<div class="modal-body" style="background: #FAD8CC;">
+					<form class="form-horizontal" id="registerform">
+					<input type="text" style="display:none" value="1" name="power" id="power1">
+						<div class="form-group">
+							<label for="username" class="control-label col-md-4">店名：</label>
+							<div class="col-md-5">
+								<input type="text" id="shopname" name="shopname"
+									class="form-control" placeholder="输入店名" />
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="pwd" class="control-label col-md-4">密码：</label>
+							<div class="col-md-5">
+								<input type="password" id="password" name="password"
+									class="form-control" placeholder="6至12位字符或数字" required pattern="^[a-zA-Z0-9]{6,12}$"title="密码必须是6至12位字符或数字" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="confirm" class="control-label col-md-4">确认密码：</label>
+							<div class="col-md-5">
+								<input type="password" id="confirm" name="confirm"
+									class="form-control" placeholder="6至12位字符或数字"  required pattern="^[a-zA-Z0-9]{6,12}$"title="密码必须是6至12位字符或数字"  />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="gender" class="control-label col-md-4">性别：</label>
+							<div class="col-md-5">
+								<input id="male" name="gender1" type="radio" value="male"
+									checked="checked" /> 男 <input id="female" name="gender1"
+									type="radio" value="female" /> 女
+							</div>
+						</div>
+					
+						<div class="form-group">
+							<label for="email" class="control-label col-md-4">email：</label>
+							<div class="col-md-5">
+								<input type="text" id="email1" placeholder="email"
+									class="form-control" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$"
+                        title="邮箱正确格式：xxx@xxx.xxx"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="phone" class="control-label col-md-4">手机：</label>
+							<div class="col-md-5">
+								<input type="text" id="phone1" placeholder="11位手机号"
+									class="form-control" required pattern="^\d{11}$"
+                        title="手机正确格式：1380038000" />
+							</div>
+						</div>
+					
+
+					
+						<div class="form-group">
+							<div class="col-md-offset-2" style="margin: auto;text-align: center">
+								<!--required="required" onclick="javascript:window.location.href='index.html'" data-dismiss="modal" -->
+								<input value="注册" type="button" class="btn btn-primary" name="regist" id="Bregist" />
+								<button type="button" class="btn btn-danger"
+									>取消</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+		<!-- 商家注册-->
+
+
+		<!-- 登录-->
+		<div id="loginForm" class="modal fade">
+		<div class="modal-dialog" style="width: 450px; height: 200px;">
+			<div class="modal-content">
+			<div class="modal-header alert alert-warning" >
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" align="center"> 请输入用户名和密码</h4>
+				</div>
+		<div class="well col-md-12 center login-box">
+
+            <form class="form-horizontal"  >
+                <fieldset>
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
+                        <input type="text" class="form-control" placeholder="用户名" id="loginname">
+                    </div>
+                    <div class="clearfix"></div><br>
+
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
+                        <input type="password" class="form-control" placeholder="密码" id="loginpassword">
+                    </div>
+               
+
+                    <p class="center col-md-5">
+                        <button type="button" class="btn btn-primary" id="login">登录</button>
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+         </div>
+          </div>
+          </div>
+
+
+</body>
+
+</html>

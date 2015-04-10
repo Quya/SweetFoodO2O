@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+	"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans> 
+	<bean id="userController"
+		class="com.quya.controller.user.UserController"
+		autowire="byName">
+	</bean>
+	<bean id="businessmanController"
+		class="com.quya.controller.businessman.BusinessmanController"
+		autowire="byName">
+	</bean>
+	<bean id="foodController"
+		class="com.quya.controller.food.FoodController"
+		autowire="byName">
+	</bean>
+		<bean id="seatController"
+		class="com.quya.controller.seat.SeatController"
+		autowire="byName">
+	</bean>
+	
+		<bean id="diyController"
+		class="com.quya.controller.diy.DiyController"
+		autowire="byName">
+	</bean>
+		<bean id="customerController"
+		class="com.quya.controller.customer.CustomerController"
+		autowire="byName">
+	</bean>
+	
+</beans>
